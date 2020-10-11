@@ -3,7 +3,7 @@ import datetime as dt
 # import pyperclip
 
 
-Create your models here.
+# Create your models here.
 
 class Category(models.Model):
     category = models.CharField(max_length=30)
@@ -41,8 +41,8 @@ class Image(models.Model):
     image = models.ImageField(upload_to='images/')
     name = models.CharField(max_length=60)
     description = models.TextField()
-    category = models.ForeignKey(Category)
-    location = models.ForeignKey(Location)
+    category = models.ForeignKey(Category,on_delete = models.CASCADE)
+    location = models.ForeignKey(Location,on_delete = models.CASCADE)
 
     def save_image(self):
         self.save()
