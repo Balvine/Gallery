@@ -7,3 +7,4 @@ from django.http import HttpResponse,Http404
 def photos(request):
     # images = Image.all_images()
     return render(request, 'index.html')
+files
