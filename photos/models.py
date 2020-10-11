@@ -50,34 +50,34 @@ class Image(models.Model):
     def delete_image(self):
         self.delete()
 
-    @classmethod
-    def update_image(cls, id, name, description, location, category):
-        image = cls.objects.get(pk=id)
-        image = cls(name=name, description=description,
-                    location=location, category=category)
-        image.save()
+#     @classmethod
+#     def update_image(cls, id, name, description, location, category):
+#         image = cls.objects.get(pk=id)
+#         image = cls(name=name, description=description,
+#                     location=location, category=category)
+#         image.save()
 
-    @classmethod
-    def get_image_by_id(cls, id):
-        image = cls.objects.get(pk=id)
-        return image
+#     @classmethod
+#     def get_image_by_id(cls, id):
+#         image = cls.objects.get(pk=id)
+#         return image
 
-    @classmethod
-    def filter_by_location(cls, location):
-        images = cls.objects.filter(location=location)
-        return images
+#     @classmethod
+#     def filter_by_location(cls, location):
+#         images = cls.objects.filter(location=location)
+#         return images
 
-    @classmethod
-    def all_images(cls):
-        images = cls.objects.all()
-        return images
-    @classmethod
-    def copy_image(image_url):
-            find_image = Image.get_image_by_id(image_id)
-            return pyperclip.copy(find_image.image_url)
-    @classmethod
-    def search_by_category(cls,category):
-            photo = Category.objects.filter(name__icontains = category)[0]
-            return  cls.objects.filter(category_id = photo.id)
-    def __str__(self):
-        return self.name
+#     @classmethod
+#     def all_images(cls):
+#         images = cls.objects.all()
+#         return images
+#     @classmethod
+#     def copy_image(image_url):
+#             find_image = Image.get_image_by_id(image_id)
+#             return pyperclip.copy(find_image.image_url)
+#     @classmethod
+#     def search_by_category(cls,category):
+#             photo = Category.objects.filter(name__icontains = category)[0]
+#             return  cls.objects.filter(category_id = photo.id)
+#     def __str__(self):
+#         return self.name
