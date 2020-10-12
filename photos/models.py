@@ -1,6 +1,6 @@
 from django.db import models
 import datetime as dt
-# import pyperclip
+import pyperclip
 
 
 # Create your models here.
