@@ -13,7 +13,7 @@ import os
 # import django_heroku
 from pathlib import Path
 import dj_database_url
-from decouple import config,Csv
+# from decouple import config,Csv
 
 
 
