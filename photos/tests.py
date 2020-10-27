@@ -6,7 +6,7 @@ from django.urls import reverse
 # Create your tests here.
 
 
-class CategoryTestClass(TestCase):
+class TestClass(TestCase):
  # Set up method
     def setUp(self):
         self.type = Category(category='wildlife')
